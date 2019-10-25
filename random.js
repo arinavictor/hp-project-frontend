@@ -34,7 +34,10 @@ function createCard(wizard){
     
     favBtn.innerText = "ADD TO COLLECTION"
     randomCard.className = 'random-card'
-    randomCard.innerHTML = `<img class='random-wizard' src='${wizard.image}'/> `
+    randomCard.innerHTML = `
+    <img class='random-wizard' src='${wizard.image}'/> 
+    <h1 class='random-name'>${wizard.name}</h1>
+    `
     
     favBtn.addEventListener("click", () => addToFavorites(wizard))
     randomCard.appendChild(favBtn)
